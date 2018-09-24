@@ -9,4 +9,8 @@ class CommonDataHelper(object):
         name="Hello,"+varName
         return name
 
+    def GetAge(self,varEge):
+        result="You Age Is "+varEge
+        return result
+
     
