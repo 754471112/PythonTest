@@ -1,4 +1,5 @@
 class CommonDataHelper(object):
+    __ip="192.168.1.184"
     def __init__(self):
         pass
 
@@ -16,5 +17,8 @@ class CommonDataHelper(object):
     def GetAdderss(self):
         address="测试地址"
         return address
+
+    def GetIPAddress(self):
+        return self.__ip
 
     
