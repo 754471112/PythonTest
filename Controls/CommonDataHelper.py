@@ -13,4 +13,8 @@ class CommonDataHelper(object):
         result="You Age Is "+varEge
         return result
 
+    def GetAdderss(self):
+        address="测试地址"
+        return address
+
     
