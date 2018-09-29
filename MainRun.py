@@ -4,4 +4,4 @@ imgHelper=ImageHelper()
 imgHelper.StartImgTest1()
 print("完成图片测试")
 
-print("测试运行结束4")
+print("测试运行结束5")
