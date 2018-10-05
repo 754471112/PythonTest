@@ -1,7 +1,13 @@
 from Controls.ImageHelper import ImageHelper
-print("开始继续图片测试")
-imgHelper=ImageHelper()
-imgHelper.StartImgTest1()
-print("完成图片测试")
+from Controls.FunctionTestHelper import *
 
-print("测试运行结束5")
+#print("开始继续图片测试")
+# imgHelper=ImageHelper()
+# imgHelper.StartImgTest1()
+#print("完成图片测试")
+
+print("开始进行功能测试")
+functionHelper=FunctionTestHelper()
+functionHelper.startTest()
+
+
