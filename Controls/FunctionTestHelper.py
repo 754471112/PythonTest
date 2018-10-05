@@ -27,7 +27,19 @@ class FunctionTestHelper(object):
         tempValue3=tempTuple2[0]
         print("输出%s"%(tempValue3))
         print("完成tuple测试")
+
+    def __conditionJudTest(self):
+        #条件判断
+        age = input("请输入年龄:")#input输入时默认为str类型
+        age=int(age)
+        if age>=18:
+            print("已成年")
+        else:
+            print("未成年")
+
+    def __loopTest(self):
+        pass
+
     #---------------------公共方法-------------------------------
     def startTest(self):
-
-        self.__tupleTest()
+        self.__conditionJudTest()
