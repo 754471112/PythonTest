@@ -1,4 +1,5 @@
-class FunctionTestHelper(object):
+#基础语法
+class BaseTestHelper(object):
     __idCard="123321"
     def __init(self):
         print("初始化FunctionTestHelper")
@@ -137,11 +138,22 @@ class FunctionTestHelper(object):
         else:
             print("未传入参数名为‘value1’的参数")
         print(param)
-
+    #私有方法
     def __priTest(self):
         print("真私有方法")
     def _priTest(self):
         print("假私有方法")
+    #错误捕捉
+    def __errorCatchTest(self):
+        try:
+            a=1
+            b=0
+            c=a/b
+            print("执行")
+        except Exception as e:
+            print("捕捉到错误:%s"%(e))
+        finally:
+            print("执行finally")
     #-------------------------------公共方法---------------------------------------
     def pubTest(self):
         print("公共方法")
@@ -160,12 +172,14 @@ class FunctionTestHelper(object):
         #关键字参数方法调用
         #self.__keyParamTest(value3="123", value1=32)
         #self.__defaultParamTest("TestName2")
+        self.__errorCatchTest()
         return
 
 #模块测试
 if __name__=="__main__":
     print("开始测试(FunctionTestHelper)")
-    testObj=FunctionTestHelper()
+    testObj=BaseTestHelper()
     testObj.Name=123
     print("姓名:%s"%(testObj.Name))
     print("身份证:%s"%(testObj.IDCard))
+    testObj.startTest()
