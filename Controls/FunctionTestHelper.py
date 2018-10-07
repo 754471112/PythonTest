@@ -1,6 +1,20 @@
 class FunctionTestHelper(object):
+    __idCard="123321"
     def __init(self):
-        pass
+        print("初始化FunctionTestHelper")
+    #Name为可读可写属性
+    @property
+    def Name(self):
+        return self.__name
+    @Name.setter
+    def Name(self,value):
+        self.__name=value
+        
+    #IDCard为只读属性
+    @property
+    def IDCard(self):
+        return self.__idCard
+
     #字符串格式化
     def __strFormatTest(self):
         print("Hellp %s,%s"%("Mic","this is you Code"))
@@ -124,7 +138,13 @@ class FunctionTestHelper(object):
             print("未传入参数名为‘value1’的参数")
         print(param)
 
+    def __priTest(self):
+        print("真私有方法")
+    def _priTest(self):
+        print("假私有方法")
     #-------------------------------公共方法---------------------------------------
+    def pubTest(self):
+        print("公共方法")
 
     def startTest(self):
         # param="Test"
@@ -141,3 +161,11 @@ class FunctionTestHelper(object):
         #self.__keyParamTest(value3="123", value1=32)
         #self.__defaultParamTest("TestName2")
         return
+
+#模块测试
+if __name__=="__main__":
+    print("开始测试(FunctionTestHelper)")
+    testObj=FunctionTestHelper()
+    testObj.Name=123
+    print("姓名:%s"%(testObj.Name))
+    print("身份证:%s"%(testObj.IDCard))
